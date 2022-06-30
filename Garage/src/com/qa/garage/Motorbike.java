@@ -5,6 +5,7 @@ public class Motorbike extends Vehicle {
 
 	public Motorbike(int engineSize, String marque) {
 		super(2, "Meep!", 2, marque);
+		this.engineSize = engineSize;
 	}
 
 	public int getEngineSize() {

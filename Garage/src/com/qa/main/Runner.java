@@ -1,6 +1,7 @@
 package com.qa.main;
 
 import com.qa.garage.Car;
+import com.qa.garage.Garage;
 import com.qa.garage.Lorry;
 import com.qa.garage.Motorbike;
 import com.qa.garage.Tesla;
@@ -26,6 +27,20 @@ public class Runner {
 		l.hitHorn();
 		System.out.println(l.getCargo());
 
+		Garage g = new Garage();
+		g.addVehicle(c);
+		g.addVehicle(t);
+		g.addVehicle(m);
+		g.addVehicle(l);
+		g.addVehicle(new Motorbike(1000, "Yamaha"));
+		g.listVehicles();
+
+		g.billAll();
+
+		g.billVehicle(1);
+
+		g.emptyGarage();
+		g.listVehicles();
 	}
 
 }
