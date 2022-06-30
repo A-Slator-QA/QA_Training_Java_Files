@@ -4,8 +4,8 @@ public class Vehicle {
 
 	private int wheels;
 	private String hornSound;
-	private int maxPass;
-	private String marque;
+	private int maxPass; // Maximum Passengers
+	private String marque; // marque is like the make, idfk
 
 	public Vehicle(int wheels, String hornSound, int maxPass, String marque) {
 		this.wheels = wheels;

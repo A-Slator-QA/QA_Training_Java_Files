@@ -27,6 +27,9 @@ public class Runner {
 		l.hitHorn();
 		System.out.println(l.getCargo());
 
+//		Vehicle v = new Vehicle(3, "Ayyy lmao", 1, "Swagmobile"); 
+// 		It says it can't be resolved to a type, because I've made Vehicle an abstact class
+
 		Garage g = new Garage();
 		g.addVehicle(c);
 		g.addVehicle(t);
@@ -38,6 +41,9 @@ public class Runner {
 		g.billAll();
 
 		g.billVehicle(1);
+
+//		g.removeCar(); This line seems to break the array list util, but I'm not sure why.
+//		g.listVehicles(); 
 
 		g.emptyGarage();
 		g.listVehicles();

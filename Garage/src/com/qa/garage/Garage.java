@@ -36,7 +36,7 @@ public class Garage {
 
 	private void calculateBill(Vehicle v) {
 		if (v instanceof Tesla) {
-			System.out.println("£500000 lmao");
+			System.out.println("£500000 lmao"); // Tesla is a child of Car so it has to be processed first
 		} else if (v instanceof Car) {
 			System.out.println("£5 per door, " + ((Car) v).getDoors() + "");
 		} else if (v instanceof Motorbike) {
@@ -44,7 +44,7 @@ public class Garage {
 		} else if (v instanceof Lorry) {
 			System.out.println("blah blah" + ((Lorry) v).getCargo());
 		}
-	}
+	} // I haven't made the bill output sensible yet but the concept is there.
 
 	public void billVehicle(int i) {
 		calculateBill(garage.get(i));
