@@ -1,17 +1,20 @@
 package com.qa.garage;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	private int wheels;
 	private String hornSound;
 	private int maxPass; // Maximum Passengers
 	private String marque; // marque is like the make, idfk
+	private int id;
+	private static int count;
 
 	public Vehicle(int wheels, String hornSound, int maxPass, String marque) {
 		this.wheels = wheels;
 		this.hornSound = hornSound;
 		this.maxPass = maxPass;
 		this.marque = marque;
+		this.id = ++count;
 	}
 
 	public Vehicle() {
@@ -53,5 +56,11 @@ public class Vehicle {
 	public void setMarque(String marque) {
 		this.marque = marque;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	protected abstract float calcBill();
 
 }

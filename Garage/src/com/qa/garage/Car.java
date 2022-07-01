@@ -27,4 +27,12 @@ public class Car extends Vehicle {
 		return doors;
 	}
 
+	@Override
+	protected float calcBill() {
+		float bill = 0;
+		bill += this.getWheels() * 15;
+		bill += this.getDoors() * 9;
+		return bill;
+	}
+
 }

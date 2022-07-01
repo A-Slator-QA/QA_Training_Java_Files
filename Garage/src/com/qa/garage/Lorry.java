@@ -27,4 +27,12 @@ public class Lorry extends Vehicle {
 		this.tonnage = tonnage;
 	}
 
+	@Override
+	protected float calcBill() {
+		float bill = 0;
+		bill += this.getWheels() * 15;
+		bill += this.getTonnage() * 100;
+		return bill;
+	}
+
 }

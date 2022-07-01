@@ -39,14 +39,15 @@ public class Runner {
 		g.listVehicles();
 
 		g.billAll();
-
 		g.billVehicle(1);
+		System.out.println(l.getId());
 
-//		g.removeCar(); This line seems to break the array list util, but I'm not sure why.
-//		g.listVehicles(); 
+//		g.removeVehicle(); // I've recreated what Jordan did to implement removing vehicles by class, however it doesn't like it when i type any of the classes into the brackets.
+//		g.listVehicles();
 
-		g.emptyGarage();
-		g.listVehicles();
+//		g.emptyGarage();
+//		g.listVehicles();
+
 	}
 
 }

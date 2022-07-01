@@ -16,4 +16,12 @@ public class Motorbike extends Vehicle {
 		this.engineSize = engineSize;
 	}
 
+	@Override
+	protected float calcBill() {
+		float bill = 0;
+		bill += this.getWheels() * 15;
+		bill += this.getEngineSize();
+		return bill;
+	}
+
 }

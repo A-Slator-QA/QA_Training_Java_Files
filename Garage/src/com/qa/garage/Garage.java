@@ -11,10 +11,6 @@ public class Garage {
 		garage.add(v);
 	}
 
-	public void removeVehicle(int i) {
-		garage.remove(i);
-	}
-
 	public void listVehicles() {
 		System.out.println(garage.toString());
 	}
@@ -26,12 +22,18 @@ public class Garage {
 
 	}
 
-	public void removeCar() {
-		for (Vehicle v : garage) {
-			if (v instanceof Car) {
-				garage.remove(v);
+	public void removeVehicle(int i) {
+		garage.remove(i);
+	}
+
+	public void removeVehicle(String type) {
+		ArrayList<Vehicle> toRemove = new ArrayList<>();
+		for (Vehicle v : this.garage) {
+			if (v.getClass().getSimpleName().equalsIgnoreCase(type)) {
+				toRemove.add(v);
 			}
 		}
+		this.garage.removeAll(toRemove);
 	}
 
 	private void calculateBill(Vehicle v) {
